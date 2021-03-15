@@ -25,7 +25,9 @@ Product.belongsToMany(Tag, {
     model: ProductTag,
     unique: false
     
-  },onDelete: 'CASCADE',
+  },
+  foreignKey: 'product_id',
+  onDelete: 'CASCADE',
   // Define an alias for when data is retrieved
   as: 'product_tags'
 });
@@ -37,7 +39,9 @@ Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
     unique: false
-  },onDelete: 'CASCADE',
+  },
+  foreignKey: 'tag_id',
+  onDelete: 'CASCADE',
   // Define an alias for when data is retrieved
   as: 'tag_products'
 });
