@@ -17,12 +17,12 @@
   ## Installation:
   Start by running
 ```bash
-   npm i
+npm i
 ```
 to install your dependencies. Add your schema to mysql and then use
 
 ```bash
-     npm run seed
+npm run seed
 ```
 to seed your database. Once that is complete you can use
 ```bash
